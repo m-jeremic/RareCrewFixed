@@ -1,0 +1,10 @@
+<table class="table table-sm table-bordered mt-1 text-dark">
+        <tr class="bg-secondary">
+            <th>Name</th><th>Total Time In Month</th><th>Actions</th>
+        </tr>
+        <tr *ngFor="let emp of employees" [class.bg-warning]="emp.totalTime > 100">
+            <td>{{emp.name || 'Unknown'}}</td>
+            <td>{{emp.totalTime || 'no data'}}</td>
+            <td><a href="">Edit</a></td>
+        </tr>
+</table>
